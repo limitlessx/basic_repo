@@ -1,0 +1,8 @@
+1. git init
+2. git status 
+3. git add .
+4. git commint -m"orginal files"
+5. git remote add origin https://github.com/limitlessx/basic_repo.git
+6. git push -u origin master 
+7. made a few changes to the files, git commint -am"second time commit"
+8. git push -u origin master
