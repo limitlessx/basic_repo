@@ -1,1 +1,3 @@
 This is the assignment for GitHub
+add 1 newline
+add 2 newline
