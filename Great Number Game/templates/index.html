@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    
+    <title>Guessing Game</title>
+    
+</head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    {%if name =='you got it!'%}
+    <div class="green">
+        <p>{{show_n}} was the number</p>
+        <form id="reset_form" action="/reset", method="POST">
+            <input type="submit" value="Play again!">
+        </form>
+    </div>
+    {%else%}
+    <div class="red">
+        <p>{{name}}</p>
+    </div>
+    
+    {%endif%}
+
+    <!-- <form id="reset_form" action="/reset", method="POST">
+        <input type="submit" value="Play again!">
+    </form> -->
+    <form id="submit_form" action="/store", method="POST">
+        <input type="text" name="input">
+        <input type="submit" value="Submit">
+    </form>
+    
+</body>
+</html>

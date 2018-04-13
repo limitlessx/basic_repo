@@ -1,0 +1,26 @@
+.green{
+    
+    width:200px;
+    height:200px;
+    outline: 1px black solid;
+    background-color:green;
+    
+}
+
+.red{
+    width:100px;
+    height:100px;
+    outline: 1px blue solid;
+    background-color:red;
+}
+
+.red p{
+    text-align: center;
+    padding-top:40px;
+    color:white;
+    font-weight: bold;
+}
+
+h1{
+    color:green;
+}

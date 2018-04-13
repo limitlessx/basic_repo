@@ -1,0 +1,18 @@
+.green{
+    
+    width:100px;
+    height:100px;
+    outline: 1px black solid;
+    background-color:green;
+    
+}
+
+.red{
+    width:100px;
+    height:100px;
+    outline: 1px black solid;
+    background-color:red;
+}
+h1{
+    color:green;
+}
