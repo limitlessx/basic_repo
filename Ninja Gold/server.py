@@ -12,7 +12,9 @@ def content():
   green=session['color']
   data ="Earned {} golds from {} ! ({})".format(str(session['gold']),session['building'],session['timestamp']),green
   session['total']=session['total']+session['gold']
-  session['output'].append((data))
+  if data not in session['output']:
+      session['output'].insert(0,data)
+#   session['output'].append((data))
   
       
 @app.route('/')
@@ -57,7 +59,9 @@ def process_money():
             red=session['color']
             data="Entered a {} and lost {} golds from ({})!".format(session['building'],str(session['gold']),session['timestamp']),red
             session['total']=session['total']-session['gold']
-            session['output'].append((data))
+            if data not in session['output']:
+                 session['output'].insert(0,data)
+            # session['output'].append((data))
             if session['total'] <=0:
                 return redirect('/reset')
 
