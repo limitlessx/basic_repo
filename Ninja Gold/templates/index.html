@@ -40,8 +40,8 @@
         
         <h4>Activities:</h4>
         <div id="activities-box">
-            {%for (i, color) in session['output']%}
-            <span id="{{color}}">{{i}}<br></span>
+            {%for i in session['output']%}
+            <span id="{{i.color}}">{{i.msg}}<br></span>
             {%endfor%}
         </div>
         <a href="/reset" class="button">Reset</a>

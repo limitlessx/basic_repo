@@ -1,9 +1,19 @@
+#container{
+    width: 850px;
+    height: 600px;
+    outline: 1px blue solid;
+    padding: 10px;
+    background-color: green;
+
+}
+
 form {
     width: 184px;
     height: 152px;
     outline: 1px black solid;
     display: inline-block;
     margin-left: 20px;
+    background: goldenrod;
 }
 
 form h2, p{
@@ -14,19 +24,12 @@ form input:last-of-type{
    margin-left:50px;
 }
 
-#container{
-    width: 850px;
-    height: 600px;
-    outline: 1px blue solid;
-    padding: 10px;
-
-}
 
 #total{
     display: inline-block;
 }
 #green{
-    color: green;
+    color: blue;
 }
 #red{
     color: red;
