@@ -15,4 +15,5 @@ arr = [2,4,78,4,2,234,5,4,2]
 
 arr = filter(findEvens, arr)
 
-"good question. Imagine you were writing that filter function as a library. You dont know how somebody wants to filter something so you give them the choice of  inputting there own function"
+"Imagine you were writing that filter function as a library. 
+You dont know how somebody wants to filter something so you give them the choice of  inputting there own function"
