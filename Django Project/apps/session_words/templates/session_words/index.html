@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>session_words</title>
+      {% load static %}
+    <!-- The line above tells Django to be ready to listen for static files -->
+    <link rel="stylesheet" href="{% static 'session_words/css/main.css' %}" media="screen" title="main"  charset="utf-8">
+    <!-- Put the static files in the static folder inside your app.  Django collects files within all static folders and puts them within a single folder -->    
+    </head>
+  <body>
+    <div id="container">
+        <div id="left_panel">
+            
+                    <form action="/session_words/process" method="POST">
+                        {% csrf_token %}
+                        <h1>Add a new word</h1>
+                        <input type="text" name="word" >
+                        <p>Choose color</p>
+                        <input type="radio" name="color" value="red" checked> Red<br>
+                        <input type="radio" name="color" value="green"> Green<br>
+                        <input type="radio" name="color" value="blue"> Blue<br>
+                        <input type="checkbox" name="checkbox" value="big" > show in BIG fonts!<br>
+                        <input id="add_button" type="submit" value="Add to Session">
+                        
+                </form>
+            
+        </div>
+        <div id="right_panel">
+            <button id="clear_button"><a href="http://127.0.0.1:8000/session_words/reset">Clear Session</a></button>
+            
+            {% foreach i in request.session.store %}
+                <p class="content"><span id="{{i.color}}" class="{{i.checkbox}}">{{i.word}}</span>{{i.time}}</p>
+            {% endfor %}
+            
+
+        </div>
+
+    </div>
+    
+    
+    
+  </body>
+</html>
